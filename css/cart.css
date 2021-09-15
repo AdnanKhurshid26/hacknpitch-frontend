@@ -1,0 +1,253 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #0088f7
+- Tints:
+#b7dfff
+#80c4fb
+#4dacf9
+- Shades: 
+#006dc6
+#003663
+
+- Accents:
+- Greys
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+header {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2vh 0;
+  padding: 4vw;
+  line-height: 1.4;
+}
+header h1 {
+  font-family: "Nunito Sans";
+  font-size: 5vw;
+  letter-spacing: 5px;
+  color: #303030;
+}
+
+header p {
+  font-family: "Open Sans";
+  letter-spacing: 2px;
+  color: #aaaaaa;
+  font-size: 3.2vw;
+}
+
+.items-list {
+  max-width: 100vw;
+  height: 56vh;
+
+  padding: 4vw;
+  display: flex;
+  gap: 1.6vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+}
+.item {
+  position: relative;
+  width: 100%;
+  /* height: 16vh; */
+
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5vh;
+  align-items: flex-start;
+  font-family: "Nunito";
+  border: solid 1px #e5e5e5;
+  box-shadow: 3px 3px 2px 2px #d6d6d6;
+  border-radius: 1.2vw;
+}
+.close-btn {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+}
+.close-btn button {
+  font-size: 2.6vh;
+  padding: 0 0.7vh;
+  background-color: transparent;
+  border: transparent;
+  font-weight: 700;
+}
+
+.item-name {
+  font-size: 2.8vh;
+  margin-bottom: 1vh;
+  letter-spacing: 2px;
+}
+.item-shop {
+  font-size: 2vh;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #686868;
+}
+.item-cost {
+  font-size: 2vh;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #686868;
+}
+.item-qnty {
+  display: flex;
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+.item-qnty-btn {
+  height: 6vw;
+  width: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #00a310;
+  font-size: 2.4vh;
+}
+.item-qnty p {
+  height: 6vw;
+  width: 10vw;
+  border-top: solid 1px #00a310;
+  border-bottom: solid 1px #00a310;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-btn {
+  border-radius: 0 1.2vw 1.2vw 0;
+}
+.subtract-btn {
+  border-radius: 1.2vw 0 0 1.2vw;
+}
+.prep-time {
+  position: absolute;
+  bottom: 36%;
+  right: 10%;
+  font-size: 1.6vh;
+  font-weight: 700;
+  color: #686868;
+}
+.total {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  font-size: 3.6vh;
+  font-weight: 800;
+}
+.total-amount-field {
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 3.2vh;
+}
+.total-amount {
+  border: solid 1px #e5e5e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 7.2vh;
+  font-size: 3.2vh;
+  font-family: "Nunito";
+  font-weight: 600;
+  letter-spacing: 3px;
+  border-radius: 1vw;
+  box-shadow: 3px 3px 5px 5px #d6d6d6;
+  margin-bottom: 2vh;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: 100vw;
+  padding: 2vw;
+}
+
+.btn {
+  border: 3px solid #00a310;
+  background-color: #fff;
+  font-size: 1.8vh;
+  font-family: "Nunito";
+  font-weight: 800;
+  color: #00a310;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  width: 100%;
+  height: 7.2vh;
+  border-radius: 1vw;
+}
+
+.btn--active {
+  color: #fff;
+  background-color: #00a310;
+}
